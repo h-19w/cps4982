@@ -1,0 +1,32 @@
+a	2:file01.txt	1:file03.txt	1:file02.txt
+ai	1:file03.txt	1:file01.txt
+an	1:file02.txt
+analytics	1:file02.txt
+and	1:file02.txt
+apache	1:file02.txt
+big	1:file02.txt	1:file01.txt	1:file03.txt
+bye	1:file01.txt
+computer	1:file01.txt	1:file03.txt
+data	2:file02.txt	2:file01.txt	1:file03.txt
+department	1:file01.txt	1:file03.txt
+easy	1:file02.txt
+goodbye	1:file02.txt
+hadoop	3:file02.txt
+hello	1:file02.txt	1:file01.txt	1:file03.txt
+hot	1:file03.txt	1:file01.txt
+is	2:file01.txt	2:file02.txt	1:file03.txt
+learn	1:file02.txt
+major	1:file01.txt
+mining	1:file02.txt
+open	1:file02.txt
+popular	1:file01.txt
+powerful	1:file02.txt
+processing	1:file01.txt	1:file03.txt
+project	2:file02.txt
+science	2:file01.txt	1:file03.txt
+source	1:file02.txt
+spark	1:file02.txt
+to	1:file02.txt
+tool	1:file02.txt
+topic	1:file03.txt	1:file01.txt
+world	2:file01.txt	1:file03.txt
