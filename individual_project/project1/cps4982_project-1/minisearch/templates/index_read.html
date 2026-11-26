@@ -1,0 +1,97 @@
+
+{% load static %} 
+<!doctype html> 
+<html> 
+<head>
+    <meta charset="utf-8">
+    <title>Search</title>
+    <!--include the css file of boostrop -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+	<center>
+		<h1 class="display-1">Text Search</h1>
+		<div>
+		<h2 class="h3 mb-3 font-weight-normal">Where are the books:</h2>
+		</div>
+		<div class="row">
+                          
+			  <div class="col-lg-4">
+				  <h4>From Kaggle</h4>
+				  <p><a href="https://www.kaggle.com/paulrohan2020/huge-books-in-plain-text-for-train-language-models" class="btn btn-primary" role="button">Books in plain text for train language models</a></p>
+			  </div>
+                          <div class="col-lg-4">
+                          </div>
+			  <div class="col-lg-4">
+				  <h4>Crawl from website</h4>
+				  <p><a href="https://www.wuxiaworld.com/novel/absolute-resonance" class="btn btn-primary" role="button">Kong fu novels</a></p>
+			  </div>
+                          
+
+	        </div>
+                {% block body_block %}
+                <div class="row my-5"></div>
+                <center> 
+
+                 {% include "pic.html" %}
+                 {% include "margin.html" %}
+                 {% endblock %}
+
+<!-- include jquery.js and popper.js -->
+    <script src="{% static 'jquery/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'popper/popper-1.14.4.js' %}"></script>
+    <!-- import bootstrap js -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+<div class="col-lg-4"></div>
+<div class="col-lg-4">
+<nav class="navbar navbar-light bg-light"> 
+  <center>
+  <form class="form-inline"> 
+    <input  
+     class="form-control mr-sm-2"  
+     type="search" placeholder="Keyword"  
+     aria-label="Keyword" 
+     name = 'keyword' 
+     value = ""> 
+     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 						  
+  </form> 
+
+  </center> 
+</nav>
+</div>
+<div class="col-lg-4"></div>
+
+<center>
+{% if results %} 
+      <div class="txtCentrado margenSup20 grisDC">
+      {%  if filename %}
+      <a href={{ filename }} >click to download the book</a>
+      {% endif %}
+     <table id='table', class="table table-bordered table-striped table-hover">
+        <thead>
+         <tr>
+          <th>content</th>
+
+         </tr>
+        </thead>
+        <tbody>
+         {% if results %}
+          <tr>
+            <td>
+                 {{ results }}
+            </td>
+          </tr>
+        {% endif %}
+        </tbody>
+      </table>
+
+
+{%elif not search_term %} 
+    <h3>Insert your search here.</h3> 
+{%elif not results %} 
+    <p>No results found.</p> 
+{% endif %} 
+</center>
+</body>
+</html> 
